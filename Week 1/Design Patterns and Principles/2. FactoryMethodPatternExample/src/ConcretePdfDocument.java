@@ -1,0 +1,5 @@
+
+class ConcretePdfDocument implements PdfDocument
+{
+
+}
