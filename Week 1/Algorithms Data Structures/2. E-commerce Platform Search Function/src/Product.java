@@ -4,12 +4,4 @@ public class Product
 	String productName;
 	String category;
 	
-	void linerSearch()
-	{
-		
-	}
-	void binarySearch()
-	{
-		
-	}
 }
