@@ -1,4 +1,5 @@
-public class TaskNode {
+public class TaskNode
+{
 	Task task;
 	TaskNode next;
 	

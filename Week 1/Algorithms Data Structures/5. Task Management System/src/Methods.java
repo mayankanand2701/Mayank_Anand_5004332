@@ -1,5 +1,6 @@
 import java.util.Scanner;
-public class Methods {
+public class Methods 
+{
 	Scanner sc=new Scanner(System.in);
 	TaskNode head;
 	
@@ -55,6 +56,11 @@ public class Methods {
 	// Time Complexity : O(N)
 	void traverse()
 	{
+		if(head==null)
+		{
+			System.out.println("Traversal not Possible : No Element Exist in the Linked List ");
+			return;
+		}
 		TaskNode temp=head;
 		System.out.println("The Traversal of the Task Linked List is : ");
 		while(temp!=null)
@@ -77,19 +83,26 @@ public class Methods {
 			System.out.println("No Task Exist : No deletion Possible");
 			return;
 		}
-		else if(head.next==null && head.task.taskName==taskName)
-		{
-			head=head.next;
-			System.out.println("Deletion Succesfull : Deleted the node with the name "+taskName+" from the Linked List");
-			return;
-		}
+        if (head.task.taskName.equals(taskName)) 
+        {
+            head = head.next;
+            System.out.println("Deletion Successful: Deleted the node with the name " + taskName + " from the Linked List");
+            return;
+        }
 		else
 		{
 			TaskNode curr = head;
 	        while (curr.next != null)
 	        {
-	        	
+	        	if (curr.next.task.taskName.equals(taskName))
+	        	{
+	                curr.next = curr.next.next;
+	                System.out.println("Deletion Successful: Deleted the node with the name " + taskName + " from the Linked List");
+	                return;
+	            }
+	            curr = curr.next;
 	        }
+	        System.out.println("Deletion Unsuccessful: Task with name " + taskName + " not found.");
 		}
 	}
 
