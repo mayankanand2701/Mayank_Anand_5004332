@@ -24,8 +24,8 @@ public class Finance
 		System.out.println("The future value after " + periods + " periods is : " + fValue);
 		
 		// Step 4
-		
 		// Let N denote the number of Periods
+		
 		// The time complexity of the recursive algorithm is O(N)
 		
 		// To optimize the recursive solution to avoid excessive computation, especially for 

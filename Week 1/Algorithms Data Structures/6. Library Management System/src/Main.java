@@ -6,7 +6,7 @@ public class Main
 		list.linerSearchByTitle();
 		list.binarySearchByTitle();
 		
-		// Step - 4
+		// Step  4
 		// Let N denote the size of the array
 		
 		// Time Complexity of Linear Search is O(N)

@@ -31,6 +31,7 @@ public class Methods
 			String position=sc.nextLine();
 			System.out.println("Enter the Employee Salary : ");
 			double salary=sc.nextDouble();
+			sc.nextLine();
 			Employee temp=new Employee();
 			temp.employeeId=id;
 			temp.name=name;
@@ -44,8 +45,13 @@ public class Methods
 	// Time Complexity : O(N)
 	void search()
 	{
+		// Handling Edge Case 
+		if(size==0)
+		{
+			System.out.println("Search Not Possible : No Employee exist in the Array ");
+			return;
+		}
 		System.out.println("Enter the Employee Name to be Searched in the Array :  ");
-		sc.nextLine();
 		String name=sc.nextLine();
 		boolean found=false;
 		for(int i=0;i<size;i++)
@@ -64,6 +70,12 @@ public class Methods
 	// Time Complexity : O(N)
 	void traverse()
 	{
+		// Handling Edge Case 
+		if(size==0)
+		{
+			System.out.println("Traversal Not Possible : No Employee exist in the Array ");
+			return;
+		}
 		System.out.println("The Detilas of all the Employees in the Array are : ");
 		for(int i=0;i<size;i++)
 		{
@@ -76,26 +88,31 @@ public class Methods
 	// Time Complexity : O(N)
 	void delete()
 	{
-		 System.out.println("Enter the Employee Name to be Deleted from the Array: ");
-	     sc.nextLine();  
-	     String name = sc.nextLine();
-	     int index = -1;
-	     for (int i = 0; i < size; i++)
-	     {
-	         if (arr[i].name.equals(name))
-	         {
-	        	 index = i;
-	             break;
-	         }
-	     }
-	     if (index == -1)
-	     {
-	    	 System.out.println("Employee with the Name '" + name + "' does not exist in the Array.");
-	         return;
-	     }
-	     for (int i = index; i < size - 1; i++) arr[i] = arr[i + 1];
-	     arr[size - 1] = null; 
-	     size--;
-	     System.out.println("Employee with the Name '" + name + "' has been deleted from the Array.");
+		// Handling Edge Case 
+		if(size==0)
+		{
+			System.out.println("Search Not Possible : No Employee exist in the Array ");
+			return;
+		}
+		System.out.println("Enter the Employee Name to be Deleted from the Array: ");
+	    String name = sc.nextLine();
+	    int index = -1;
+	    for (int i = 0; i < size; i++)
+	    {
+	        if (arr[i].name.equals(name))
+	        {
+	        	index = i;
+	            break;
+	        }
+	    }
+	    if (index == -1)
+	    {
+	    	System.out.println("Employee with the Name '" + name + "' does not exist in the Array.");
+	        return;
+	    }
+	    for (int i = index; i < size - 1; i++) arr[i] = arr[i + 1];
+	    arr[size - 1] = null; 
+	    size--;
+	    System.out.println("Employee with the Name '" + name + "' has been deleted from the Array.");
 	}
 }

@@ -1,4 +1,4 @@
-// Step -1 
+// Step - 1 
 
 // Singly Linked List
 // It is a linear data structure in which the elements are not stored in contiguous memory 
@@ -8,7 +8,7 @@
 // It is a linear data structure in which the elements are not stored in contiguous memory 
 // locations and each element is connected only to its next element using a double pointer.
 
-// Step -2 
+// Step - 2 
 
 public class Task
 {
