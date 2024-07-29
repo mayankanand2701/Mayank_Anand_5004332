@@ -1,11 +1,18 @@
-public class Computer {
+// Step 1 
+// Already created a new Java project named BuilderPatternExample
+
+// Step 2
+
+public class Computer
+{
 	private String Company;
 	private String CPU;
 	private String RAM;
     private String storage;
     private String motherboard;
     
-    // Constructor
+    // Step 4 
+    // Constructor that takes the Builder as a parameter.
     private Computer(Builder build)
     {
     	this.Company=build.Company;
@@ -50,6 +57,7 @@ public class Computer {
 		this.motherboard = motherboard;
 	}
 	
+	// Step 3 
 	// Nested Class
     public static class Builder
     {

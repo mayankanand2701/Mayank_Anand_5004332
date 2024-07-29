@@ -1,5 +1,6 @@
-
-public class PaypalAdapter implements PaymentProcessor {
+// Step 4
+public class PaypalAdapter implements PaymentProcessor
+{
     private Paypal paypal;
 	
 	public PaypalAdapter(Paypal paypal)

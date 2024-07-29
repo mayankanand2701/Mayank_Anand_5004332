@@ -1,3 +1,6 @@
-public interface WordDocument {
+// Step 2
+public interface WordDocument
+{
 
 }
+

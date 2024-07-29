@@ -1,4 +1,5 @@
-
-public interface PdfDocument {
+// Step 2
+public interface PdfDocument 
+{
 
 }

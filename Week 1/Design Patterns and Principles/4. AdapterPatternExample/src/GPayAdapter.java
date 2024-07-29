@@ -1,5 +1,7 @@
+// Step 4
 
-public class GPayAdapter implements PaymentProcessor {
+public class GPayAdapter implements PaymentProcessor
+{
 	private GPay gpay;
 	
 	public GPayAdapter(GPay gpay)
